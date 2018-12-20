@@ -1,0 +1,32 @@
+<!-- inner HTML -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <ul id="target">
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+        <input type="button" onclick="getinnerhtml();" value="get" />
+        <input type="button" onclick="setinnerhtml();" value="set" />
+        <input type="button" onclick="getinnertext();" value="get" />
+        <input type="button" onclick="setinnertext();" value="set" />
+        <script>
+            function getinnerhtml(){
+                var target = document.getElementById('target');
+                alert(target.innerHTML);
+            }
+            function setinnerhtml(){
+                var target = document.getElementById('target');
+                target.innerHTML = "<li>JavaScript Core</li><li>BOM</li><li>DOM</li>";
+            }
+            function getinnertext(){
+                var target = document.getElementById('target');
+                alert(target.innerText);
+            }
+            function setinnertext(){
+                var target = document.getElementById('target');
+                target.innerText = "<li>JavaScript Core</li><li>BOM</li><li>DOM</li>";
+            }
+        </script>
+    </body>
+</html>
