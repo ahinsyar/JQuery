@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+            <input type="text" id="target"></textarea>
+            <input id="remove"  type="button" value="remove" />
+            <p id="status"></p>
+            <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script>
+              var handler = function(e){
+                $('#status').text(e.type+Math.random());
+              };
+              $('#target').on('focus blur', handler)
+              $('#remove').on('click' , function(e){
+                  //이벤트 핸들러를 지정하지 않는 경우 모든 이벤트가 삭제 된다.
+                  //이벤트 핸들러를 지정한 경우 해당 이벤트만 삭제 된다.
+                $('#target').off('focus blur', handler);
+                console.log(32);
+              })
+            </script>
+    </body>
+</html>

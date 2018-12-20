@@ -1,0 +1,18 @@
+<!-- jQuery Selecter -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+        </ul>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            //on 이벤트 생성시 이벤트 명 다음에 Element명을 주면 해당 Element를 선택 하여 DOM 수정이 가능 하다.
+            $('ul').on('click','a, li', function(event){
+                console.log(this.tagName);
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!-- 다중 이벤트 설치 -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" id="target" />
+        <p id="status"></p>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            //on안에 이벤트를 인자로 아래 처럼 띄여쓰기로 여러개의 이벤트를 동시에 설치 할 수 있다.
+            $('#target').on('focus blur', function(e){
+                $('#status').html(e.type);
+            })
+            
+            //다음과 같이 객체 형식으로 여러개의 이벤트를 추가 할 수 있다.
+            /*$('#target').on(
+                {
+                    focus : function(e){
+                            $('#status').html(e.type);
+                            },
+                    blur :  function(e){
+                            $('#status').html(e.type);
+                            }
+                }
+            )*/
+
+            //체이닝 방식으로도 여러개의 이벤트를 연결 하여 사용 할 수 있다.
+            /*function t(e){
+                $('#status').html(e.type);
+            }
+            $('#target').on('focus', t).on('blur', t)*/
+        </script>
+    </body>
+</html>
