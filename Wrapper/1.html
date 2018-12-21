@@ -1,0 +1,21 @@
+<!-- Wrapper는 jQuery를 사용하기위한 선언을 하는 것 -->
+<html>
+    <body>
+        <ul>
+            <li>test2</li>
+        </ul>
+        <ul class="foo">
+            <li>test</li>
+        </ul>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            (function($){            
+                $('ul.foo').click( function() {
+                    //두가지 형식 모두 jQuery를 사용하기 위한 Wrapper임
+                    jQuery('li', this).css('background-color','red')
+                    //$('li', this).css('background-color','red');
+                });
+            })(jQuery)
+        </script>
+    </body>
+</html>
